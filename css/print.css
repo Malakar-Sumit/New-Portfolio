@@ -47,6 +47,7 @@ button.owl-dot.active::before{opacity: 1;}
 .headernav{position: fixed; left: 0; right: 0; top: 0px; z-index: 1; backdrop-filter: blur(20px); padding: 10px 0; background: #00000090;}
 .headernav .container{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0;}
 .headernav .logo a{font-size:28px; font-weight:400; color:#fff; display: block; line-height: 33px;}
+.headernav .logo a img{margin-right: 5px;}
 .headernav .logo a span{color: #f75023;}
 .headernav .topnav{display: flex; flex-wrap: wrap; gap: 50px; align-items: center;}
 .headernav .topnav ul{display: flex; flex-wrap: wrap; gap: 50px;}
@@ -57,15 +58,15 @@ button.owl-dot.active::before{opacity: 1;}
 .headernav .topnav .download-btn a::before{content:""; position: absolute; background: #f75023; width: 100%; height: 0; left: 0; bottom: 0; transition: .2s linear; z-index: -1;}
 .headernav .topnav .download-btn a:hover::before{height: 100%;}
 
-.bannersec{padding: 100px 0 50px;}
+.bannersec{padding: 100px 0 100px;}
 .bannersec .container{display: flex; flex-wrap: wrap; gap: 4%;}
 .bannersec .bannertxt{width: 48%; padding: 20px; box-sizing: border-box;}
 .bannersec .bannertxt h3{font-size: 30px; font-weight: 500; color: #f75023; line-height: 50px;}
 .bannersec .bannertxt h3 span{display: block; font-size: 60px; font-weight: 600; color: #fff;}
 .bannersec .bannertxt h4{font-size: 26px; font-weight: 500; color: #fff; margin-top: 30px;}
-.bannersec .bannertxt h4 span{text-shadow: 2px 2px #1cbe5980;}
+.bannersec .bannertxt h4 span{color: #1cbe59;}
 .bannersec .bannertxt h4 span.city{color:#f0c45c;}
-.bannersec .bannertxt p{font-size: 18px; font-weight: 500; color: #fff; margin-top: 20px;}
+.bannersec .bannertxt p{font-size: 18px; font-weight: 500; color: #ffffff95; margin-top: 20px;}
 .bannersec .bannertxt .details{display: flex; flex-wrap: wrap; gap: 50px; margin-top: 50px; align-items: center; font-size: 0;}
 .bannersec .bannertxt .details .about-btn a{font-size: 22px; font-weight: 500; color: #fff; padding: 10px 45px; display: inline-block; box-sizing: border-box; border: 2px solid #f75023; border-radius: 30px; position: relative; z-index: 0; overflow: hidden;}
 .bannersec .bannertxt .details .about-btn a::before{content:""; position: absolute; background: #f75023; width: 100%; height: 100%; bottom: 0; left: 0; z-index: -1;  transition: .2s linear;}
@@ -78,9 +79,9 @@ button.owl-dot.active::before{opacity: 1;}
 .bannersec .bannertxt .details .socialicon ul li a.ig{background-position: -61px 0;}
 .bannersec .avatarsec{width: 48%; text-align: center;}
 .bannersec .avatarsec .img{display: inline-block; position: relative;}
-.bannersec .avatarsec span.illustrator img{width: 50px; height: 50px; position: absolute; top: 0; left: 0; animation: move 1.5s linear infinite alternate; }
-.bannersec .avatarsec span.photoshop img{width: 50px; height: 50px; position: absolute; right: 0; top: 40%; transform: translateY(-50%); animation: move 1.5s linear infinite alternate;}
-.bannersec .avatarsec span.figma {padding: 10px; background: #fff; display: inline-block; border-radius: 10px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); animation: move 1.5s linear infinite alternate;}
+.bannersec .avatarsec span.html img{width:50px; height:50px; padding:5px; border-radius:10px; background:#fff; position:absolute; top:0; right:0; animation: move 1.5s linear infinite alternate; }
+.bannersec .avatarsec span.photoshop img{width: 60px; height: 60px; position: absolute; left: 0; top: 28%; transform: translateY(-50%); animation: move 1.5s linear infinite alternate;}
+.bannersec .avatarsec span.css img{width:50px; height:50px; background:#fff; border-radius:10px; padding:5px; position:absolute; bottom:5%; left: 70%; transform: translateX(-50%); animation: move 1.5s linear infinite alternate;}
 
 @keyframes move{
     0%{transform: translateY(0px);
@@ -101,7 +102,7 @@ button.owl-dot.active::before{opacity: 1;}
 .aboutwork .workwrap ul li h3{font-size: 26px; font-weight: 500; color: #fff; margin-top: 20px;}
 .aboutwork .workwrap ul li p{font-size: 18px; font-weight: 400; color: #ffffff95; margin-top: 20px; font-family: var(--secondary-font);}
 
-.aboutme{padding: 100px 0; }
+.aboutme{padding: 100px 0; background-color: #1e1d1d;}
 .aboutme .container{display: flex; flex-wrap: wrap; align-items: center; gap: 30px; justify-content: center;}
 .aboutimg{width: 48.5%; text-align: center; position: relative;}
 .aboutimg::before{content:""; position: absolute; background: url(../images/about-pattern.png) no-repeat; width: 130px; height: 215px; left: 0; top: -120px; animation: fadeinleft 1s linear; visibility: visible; background-size: contain;}
@@ -120,7 +121,7 @@ button.owl-dot.active::before{opacity: 1;}
 .aboutdetails h3 span{display: block; font-size: 40px; font-weight: 500; color: #fff;}
 .aboutdetails p{font-size: 20px; font-weight: 400; color: #ffffff95; font-family: var(--secondary-font); line-height: 30px; margin-top: 30px;}
 .aboutdetails .hire-btn{margin-top: 30px; font-size: 0;} 
-.aboutdetails .hire-btn a{display: inline-block; font-size: 18px; font-weight: 500; color: #fff; padding: 10px 40px; box-sizing: border-box; border: 2px solid #f75023; border-radius: 30px; position: relative; overflow: hidden;}
+.aboutdetails .hire-btn a{display:inline-block; font-size:18px; font-weight:500; color: #fff; padding:10px 40px; box-sizing:border-box; border:2px solid #f75023; border-radius:30px; position:relative; overflow:hidden; z-index:0;}
 .aboutdetails .hire-btn a::before{content:""; position: absolute; background: #f75023; left: 0; bottom: 0; width: 100%; height: 100%; z-index: -1; transition: .2s linear;}
 .aboutdetails .hire-btn a:hover::before{height: 0;}
 
@@ -192,8 +193,8 @@ button.owl-dot.active::before{opacity: 1;}
 .skillsec .aboutskills li .process .processtxt{ position: absolute; top: -30px; left: 80%; font-size: 18px; color: #f75023; font-weight: 400;}
 .skillsec .aboutskills li.Photoshop .process .processbar{width: 95%; height: 100%; background: #1cbe59; position: absolute; left: 0; top: 0; border-radius: 10px 0 0 10px;}
 .skillsec .aboutskills li.Photoshop .process .processtxt{ position: absolute; top: -30px; left: 90%; font-size: 18px; color: #1cbe59; font-weight: 400;}
-.skillsec .aboutskills li.figma .process .processbar{width: 75%; height: 100%; background: #f0c45c; position: absolute; left: 0; top: 0; border-radius: 10px 0 0 10px;}
-.skillsec .aboutskills li.figma .process .processtxt{position:absolute; top:-30px; left:70%; font-size:18px; color:#f0c45c; font-weight: 400;}
+.skillsec .aboutskills li.css .process .processbar{width: 75%; height: 100%; background: #f0c45c; position: absolute; left: 0; top: 0; border-radius: 10px 0 0 10px;}
+.skillsec .aboutskills li.css .process .processtxt{position:absolute; top:-30px; left:70%; font-size:18px; color:#f0c45c; font-weight: 400;}
 .skillsec .skillsimg{width: 48.5%; text-align: center;}
 .skillsec .skillsimg .img img{width: 450px; max-height: 650px;}
 

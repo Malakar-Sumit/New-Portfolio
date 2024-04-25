@@ -10,7 +10,7 @@ font-family: "Jost", sans-serif; */
 .container{max-width: min(1290px , 96%); margin: 0 auto;}
 img{max-width: 100%; height: auto; width: auto;}
 
-/* ------------------------ Carousel CSS----------------------------- */
+/* ------------------------ Carousel CSS-----------------------------
 .owl-carousel, .owl-carousel .owl-item { -webkit-tap-highlight-color:transparent; position:relative } 
 .owl-carousel { display:none; width:100%; z-index:0;}
 .owl-carousel .owl-stage { position:relative; -ms-touch-action:pan-Y; touch-action:manipulation; -moz-backface-visibility:hidden }
@@ -39,10 +39,10 @@ button.owl-dot.active{background: #f75023; }
 button.owl-dot.active::before{opacity: 1;}
 .owl-dots { display: flex; justify-content: center; gap: 15px; }
 /* / Feel free to change duration  /  */
-.animated{-webkit-animation-duration:1000 ms; animation-duration:1000 ms; -webkit-animation-fill-mode : both  ; animation-fill-mode : both  ;}  
+/* .animated{-webkit-animation-duration:1000 ms; animation-duration:1000 ms; -webkit-animation-fill-mode : both  ; animation-fill-mode : both  ;}   */
 /* / .owl-animated-out - only for current item /  
 / This is very important class. Use z-index if you want move Out item above In item / */
-.owl-animated-out {z-index:1}
+/* .owl-animated-out {z-index:1} */ */
 
 .headernav{position: fixed; left: 0; right: 0; top: 0px; z-index: 1; backdrop-filter: blur(20px); padding: 10px 0; background: #00000090;}
 .headernav .container{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0;}

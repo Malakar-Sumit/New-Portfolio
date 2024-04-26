@@ -104,6 +104,9 @@ img{max-width: 100%; height: auto; width: auto;}
 .Projects h3 span{display: block; font-size: 40px; font-weight: 500; color: #fff;}
 .Projects p{font-size: 18px; font-weight: 400; color: #ffffff95; font-family: var(--secondary-font); margin-top: 10px; text-align: center;}
 .Projects p span{display: block;}
+.Projects .projectwrap{max-width: 1100px; margin: 0 auto; margin-top: 50px;}
+.Projects .projectwrap ul{display: flex; flex-wrap: wrap; gap: 30px;}
+.Projects .projectwrap ul li{width: 100%; border-radius: 50px; padding: 30px; background: #1e1d1d; display: flex; flex-wrap: wrap; gap: 30px;}
 
 @keyframes zoom-in{
     0%{

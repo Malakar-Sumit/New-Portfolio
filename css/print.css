@@ -1,5 +1,5 @@
 /*** GLOBAL SETTING ***/
-body {margin:0; padding:0;font:normal 14px "Jost", sans-serif;; color:#5b5b5b; line-height:normal; background-color: #2b2d33}
+body {margin:0; padding:0;font:normal 14px "Jost", sans-serif;; color:#5b5b5b; line-height:normal; background-color: #1e1d1d }
 /* font-family: "Open Sans", sans-serif;
 font-family: "Jost", sans-serif; */
 
@@ -54,7 +54,7 @@ img{max-width: 100%; height: auto; width: auto;}
     }
 }
 
-.aboutsec{padding: 100px 0; background-color: #1e1d1d;}
+.aboutsec{padding: 100px 0; background-color: #2b2d33;}
 .aboutsec .container{display: flex; flex-wrap: wrap; align-items: center; gap: 30px; justify-content: space-between;}
 .aboutsec .aboutimg{width: 48.5%; text-align: center; position: relative;}
 .aboutsec .aboutimg::before{content:""; position: absolute; background: url(../images/about-pattern.png) no-repeat; width: 130px; height: 215px; left: 0; top: -120px; animation: fadeinleft 1s linear; visibility: visible; background-size: contain;}
@@ -100,13 +100,21 @@ img{max-width: 100%; height: auto; width: auto;}
 .Projects .container{position: relative;}
 .Projects .container::before{position: absolute; content:""; background: url(../images/my-work-1.png) no-repeat; width: 133px; height: 168px; top: 0; left: 0; animation: zoom-in 2s; background-size: contain;}
 .Projects .container::after{position: absolute; content:""; background: url(../images/my-work-2.png) no-repeat; width: 381px; height: 371px; bottom: -170px; right: 0; z-index: -1; background-size: contain;}
-.Projects h3{font-size: 25px; font-weight: 400; color: #f75023; text-align: center;}
+.Projects h3{font-size: 25px; font-weight: 400; color: #f75023; text-align: center; line-height: 45px;}
 .Projects h3 span{display: block; font-size: 40px; font-weight: 500; color: #fff;}
-.Projects p{font-size: 18px; font-weight: 400; color: #ffffff95; font-family: var(--secondary-font); margin-top: 10px; text-align: center;}
+.Projects p{font-size: 20px; font-weight: 400; color: #ffffff95; font-family: var(--secondary-font); margin-top: 30px; text-align: center; line-height: 30px;}
 .Projects p span{display: block;}
-.Projects .projectwrap{max-width: 1100px; margin: 0 auto; margin-top: 50px;}
-.Projects .projectwrap ul{display: flex; flex-wrap: wrap; gap: 30px;}
-.Projects .projectwrap ul li{width: 100%; border-radius: 50px; padding: 30px; background: #1e1d1d; display: flex; flex-wrap: wrap; gap: 30px;}
+.Projects .projectwrap{max-width: 1100px; margin: 0 auto; margin-top: 80px;}
+.Projects .projectwrap ul{display: flex; flex-wrap: wrap; gap: 50px;}
+.Projects .projectwrap ul li{width: 100%; border-radius: 20px; padding: 30px; background: #2b2d33; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75); align-items: center;}
+.Projects .projectwrap ul li .projectimg{width: 48%;}
+.Projects .projectwrap ul li .projectimg img{border-radius: 10px;}
+.Projects .projectwrap ul li:nth-child(even) .projectimg{order: 2;}
+.Projects .projectwrap ul li:nth-child(even) .projectdetails{order: 1;}
+.Projects .projectwrap ul li .projectdetails{width: 48%;}
+.Projects .projectwrap ul li .projectdetails h4{display: block; font-size: 36px; font-weight: 500; color: #fff; line-height: 30px; text-align: center;}
+.Projects .projectwrap ul li .projectdetails p{font-size: 18px; text-align: unset; line-height: 28px; margin-top: 30px;}
+.view-btn.btn{margin-top: 30px; font-size: 0; text-align: center;}
 
 @keyframes zoom-in{
     0%{
@@ -118,8 +126,8 @@ img{max-width: 100%; height: auto; width: auto;}
     }
 }
 
-.contactsec{padding: 100px 0; background:#1e1d1d;}
-.contactsec .container{position: relative;}
+.contactsec{padding: 100px 0; background: #2b2d33}
+.contactsec .container{position: relative; font-size: 0;}
 .contactsec .container::before{content:""; position:absolute; background: url(../images/contactsec-pattern.png) no-repeat; width: 150px; height: 210px; background-size: contain; left: -30px; top: 0;}
 .contactsec .container::after{content:""; position: absolute; background: url(../images/contactsec-pattern1.png) no-repeat; width: 165px; height: 195px; background-size: contain; right: -29px; bottom: 460px;}
 .contactsec h3{font-size: 25px; font-weight: 400; color: #f75023; text-align: center;}

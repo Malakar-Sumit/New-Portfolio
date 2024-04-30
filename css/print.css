@@ -57,7 +57,7 @@ img{max-width: 100%; height: auto; width: auto;}
 .aboutsec{padding: 100px 0; background-color: #2b2d33;}
 .aboutsec .container{display: flex; flex-wrap: wrap; align-items: center; gap: 30px; justify-content: space-between;}
 .aboutsec .aboutimg{width: 48%; text-align: center; position: relative;}
-.aboutsec .aboutimg::before{content:""; position: absolute; background: url(../images/about-pattern.png) no-repeat; width: 110px; height: 180px; left: 0; top: -70px; animation: fadeinleft 1s linear; visibility: visible; background-size: contain;}
+.aboutsec .aboutimg::before{content:""; position: absolute; background: url(../images/about-pattern-1.png) no-repeat; width: 110px; height: 180px; left: 0; top: -70px; animation: fadeinleft 1s linear; visibility: visible; background-size: contain;}
 .aboutsec .aboutimg .img img{width: 485px; max-height: 485px;}
 .aboutsec .aboutdetails{width: 48%; position: relative; }
 .aboutsec .aboutdetails::before{content:""; position: absolute; background: url(../images/about-pattern-2.png) no-repeat; width: 272px; height: 165px; right: 0; bottom: -110px; background-size: contain;}
@@ -90,8 +90,8 @@ img{max-width: 100%; height: auto; width: auto;}
 
 .Projects{padding: 100px 0; position: relative;}
 .Projects .container{position: relative;}
-.Projects .container::before{position: absolute; content:""; background: url(../images/my-work-1.png) no-repeat; width: 133px; height: 168px; top: 0; left: 0; animation: zoom-in 2s; background-size: contain;}
-.Projects .container::after{position: absolute; content:""; background: url(../images/my-work-2.png) no-repeat; width: 381px; height: 371px; bottom: -170px; right: 0; z-index: -1; background-size: contain;}
+.Projects .container::before{position: absolute; content:""; background: url(../images/project-pattern-1.png) no-repeat; width: 133px; height: 168px; top: 0; left: 0; animation: zoom-in 2s; background-size: contain;}
+.Projects .container::after{position: absolute; content:""; background: url(../images/project-pattern-2.png) no-repeat; width: 250px; height: 240px; bottom: -100px; right: 0; z-index: -1; background-size: contain;}
 .Projects h3{font-size: 25px; font-weight: 400; color: #f75023; text-align: center; line-height: 45px;}
 .Projects h3 span{display: block; font-size: 40px; font-weight: 500; color: #fff;}
 .Projects p{font-size: 20px; font-weight: 400; color: #ffffff95; font-family: var(--secondary-font); margin-top: 30px; text-align: center; line-height: 30px;}
@@ -121,18 +121,20 @@ img{max-width: 100%; height: auto; width: auto;}
 
 .contactsec{padding: 100px 0; background: #2b2d33}
 .contactsec .container{position: relative; font-size: 0;}
-.contactsec .container::before{content:""; position:absolute; background: url(../images/contactsec-pattern.png) no-repeat; width: 150px; height: 210px; background-size: contain; left: -30px; top: 0;}
-.contactsec .container::after{content:""; position: absolute; background: url(../images/contactsec-pattern1.png) no-repeat; width: 165px; height: 195px; background-size: contain; right: -29px; bottom: 460px;}
+.contactsec .container::before{content:""; position:absolute; background: url(../images/contact-pattern-1.png) no-repeat; width:170px; height:150px; background-size: contain; left: 0px; top: 0; animation: zoom-in 2s;}
+.contactsec .container::after{content:""; position:absolute; background: url(../images/contact-pattern-4.png) no-repeat; width:210px; height:175px; background-size: contain; right:0px; bottom:-95px; animation: zoom-in 2s;}
 .contactsec h3{font-size: 25px; font-weight: 400; color: #f75023; text-align: center;}
 .contactsec h3 span{font-size: 40px; font-weight: 500; color: #fff; display: block;}
-.contactwrap {max-width: 1100px; margin: 0 auto; margin-top: 50px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; align-items: center;}
+.contactsec .contactwrap {max-width: 1100px; margin: 0 auto; margin-top: 50px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; align-items: center; position: relative;}
+.contactsec .contactwrap::before{content:""; position: absolute; background: url(../images/contact-pattern-2.png) no-repeat; width: 180px; height: 180px; background-size: contain; left:-150px; bottom:-80px; animation: zoom-in 2s;}
+.contactsec .contactwrap::after{content:""; position: absolute; background: url(../images/contact-pattern-3.png) no-repeat; width: 165px; height: 195px; background-size: contain; right:-95px; bottom:-40px;}
 .contactwrap .contactinfo{width: 48%;}
 .contactwrap .contactinfo ul li + li{margin-top: 20px;}
-.contactwrap .contactinfo ul li .location{display: inline-block; vertical-align: middle; padding: 45px; background: #fedfd7; position: relative; border-radius: 50%;}
+.contactwrap .contactinfo ul li .location{display: inline-block; vertical-align: middle; padding: 35px; background: #fedfd7; position: relative; border-radius: 50%;}
 .contactwrap .contactinfo ul li .location::before{content:""; position:absolute; background:url(../images/location.png) no-repeat; width:24px; height: 24px; top: 50%; left: 50%; transform: translate(-50% , -50%);}
-.contactwrap .contactinfo ul li .email{display: inline-block; vertical-align: middle; padding: 45px; background: #ddf5e6; position: relative; border-radius: 50%;}
+.contactwrap .contactinfo ul li .email{display: inline-block; vertical-align: middle; padding: 35px; background: #ddf5e6; position: relative; border-radius: 50%;}
 .contactwrap .contactinfo ul li .email::before{content:""; position:absolute; background:url(../images/email.png) no-repeat; width: 24px; height: 24px; top: 50%; left: 50%; transform: translate(-50%,-50%);}
-.contactwrap .contactinfo ul li .phone{display: inline-block; vertical-align: middle; padding: 45px; background: #ece8fd; position: relative; border-radius: 50%;}
+.contactwrap .contactinfo ul li .phone{display: inline-block; vertical-align: middle; padding: 35px; background: #ece8fd; position: relative; border-radius: 50%;}
 .contactwrap .contactinfo ul li .phone::before{content:""; position: absolute; background: url(../images/phone.png) no-repeat; width: 24px; height: 24px; top: 50%; left: 50%; transform: translate(-50%,-50%);}
 .contactwrap .contactinfo ul li h4{font-size:25px; font-weight: 500; color: #fff; display: inline-block; vertical-align: middle; margin-left: 20px;}
 .contactwrap .contactinfo ul li h4 span{font-size:18px; font-weight: 400; color: #ffffff95; display: block; transition: .2s linear;}
@@ -161,6 +163,7 @@ img{max-width: 100%; height: auto; width: auto;}
 
 
 @media only screen and ( max-width: 1280px ) {
+    .aboutsec .aboutdetails h3 span{font-size: 40px;}
 }
 @media only screen and ( max-width: 1024px ) {
     .aboutwork .workwrap ul {gap: 40px;}

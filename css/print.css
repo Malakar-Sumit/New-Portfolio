@@ -1,11 +1,38 @@
 /*** GLOBAL SETTING ***/
 body {margin:0; padding:0;font:normal 14px "Jost", sans-serif;; color:#5b5b5b; line-height:normal; background-color: #1e1d1d }
-/* font-family: "Open Sans", sans-serif;
-font-family: "Jost", sans-serif; */
 
-:root{
-    --secondary-font : "Open Sans", sans-serif;
-}
+/* jost-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/jost-v15-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* jost-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/jost-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* jost-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/jost-v15-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* jost-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/jost-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
 
 .container{max-width: min(1290px , 96%); margin: 0 auto;}
 img{max-width: 100%; height: auto; width: auto;}
@@ -13,7 +40,7 @@ img{max-width: 100%; height: auto; width: auto;}
 .btn a::before{content:""; position: absolute; background: #f75023; left: 0; bottom: 0; width: 100%; height: 100%; z-index: -1; transition: .2s linear;}
 .btn a:hover::before{height: 0;}
 
-.headernav{position: fixed; left: 0; right: 0; top: 0px; z-index: 1; backdrop-filter: blur(20px); padding: 10px 0; background: #00000090;}
+.headernav{position: fixed; left: 0; right: 0; top: 0px; z-index: 1; backdrop-filter: blur(20px); padding: 10px 0; background: #00000090; border-bottom: 1px solid #ffffff60;}
 .headernav .container{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0;}
 .headernav .logo a{ display: flex; gap: 5px; align-items: center;}
 .headernav .logo a span{font-size:28px; font-weight:600; color:#fff;}
@@ -30,12 +57,12 @@ img{max-width: 100%; height: auto; width: auto;}
 .bannersec{padding: 100px 0 100px;}
 .bannersec .container{display: flex; flex-wrap: wrap; gap:30px; justify-content: space-between;}
 .bannersec .bannertxt{width: 48%; padding: 20px; box-sizing: border-box;}
-.bannersec .bannertxt h3{font-size: 30px; font-weight: 500; color: #f75023; line-height: 55px;}
+.bannersec .bannertxt h3{font-size: 30px; font-weight: 500; color: #f75023; line-height: 60px;}
 .bannersec .bannertxt h3 span{display: block; font-size: 60px; font-weight: 600; color: #fff;}
 .bannersec .bannertxt h4{font-size: 26px; font-weight: 500; color: #fff; margin-top: 30px; line-height: 30px;}
 .bannersec .bannertxt h4 span{color: #1cbe59;}
 .bannersec .bannertxt h4 span.city{color:#f0c45c;}
-.bannersec .bannertxt p{font-size: 20px; font-weight: 400; color: #ffffff95; margin-top: 20px;}
+.bannersec .bannertxt p{font-size: 22px; font-weight: 400; color: #ffffff95; margin-top: 30px; line-height: 35px;}
 .bannersec .bannertxt .details{display: flex; flex-wrap: wrap; gap: 50px; margin-top: 50px; align-items: center; font-size: 0;}
 .bannersec .bannertxt .details .about-btn a{font-size: 20px; font-weight: 600; padding: 10px 45px; line-height: 25px;}
 .bannersec .avatarsec{width: 48%; text-align: center;}
@@ -63,7 +90,7 @@ img{max-width: 100%; height: auto; width: auto;}
 .aboutsec .aboutdetails::before{content:""; position: absolute; background: url(../images/about-pattern-2.png) no-repeat; width: 272px; height: 165px; right: 0; bottom: -110px; background-size: contain; }
 .aboutsec .aboutdetails h3{font-size: 25px; font-weight: 400; color: #f75023; line-height: 50px;}
 .aboutsec .aboutdetails h3 span{display: block; font-size: 40px; font-weight: 500; color: #fff;}
-.aboutsec .aboutdetails p{font-size: 20px; font-weight: 400; color: #ffffff95; font-family: var(--secondary-font); line-height: 30px; margin-top: 30px;}
+.aboutsec .aboutdetails p{font-size: 20px; font-weight: 400; color: #ffffff95;  line-height: 30px; margin-top: 30px;}
 .aboutsec .aboutdetails .hire-btn{margin-top: 30px; font-size: 0; text-align: end;} 
 .aboutsec .aboutdetails .hire-btn a{margin-right: 40px;}
 
@@ -84,8 +111,6 @@ img{max-width: 100%; height: auto; width: auto;}
 .Projects .container::after{position: absolute; content:""; background: url(../images/project-pattern-2.png) no-repeat; width: 250px; height: 240px; bottom: -100px; right: 0; z-index: -1; background-size: contain;}
 .Projects h3{font-size: 25px; font-weight: 400; color: #f75023; text-align: center; line-height: 45px;}
 .Projects h3 span{display: block; font-size: 40px; font-weight: 500; color: #fff;}
-.Projects p{font-size: 20px; font-weight: 400; color: #ffffff95; font-family: var(--secondary-font); margin-top: 30px; text-align: center; line-height: 30px;}
-.Projects p span{display: block;}
 .Projects .projectwrap{max-width: 1100px; margin: 0 auto; margin-top: 80px;}
 .Projects .projectwrap ul{display: flex; flex-wrap: wrap; gap: 50px;}
 .Projects .projectwrap ul li{width: 100%; border-radius: 20px; padding: 30px; background: #2b2d33; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75); align-items: center; border-top: 5px solid #f75023;}
@@ -96,7 +121,7 @@ img{max-width: 100%; height: auto; width: auto;}
 .Projects .projectwrap ul li .projectdetails{width: 48%; font-size: 0;}
 .Projects .projectwrap ul li .projectdetails h4{ font-size:32px; font-weight:500; color:#fff; line-height:35px; display: inline-block; vertical-align: middle;}
 .Projects .projectwrap ul li .projectdetails h5{font-size: 18px; font-weight: 500; color: #f75023; line-height: 20px; display: inline-block; vertical-align: middle; padding: 5px; background: #fff; border-radius: 10px; margin-left: 20px;}
-.Projects .projectwrap ul li .projectdetails p{font-size: 17px; text-align: unset; line-height: 28px; margin-top: 20px;}
+.Projects .projectwrap ul li .projectdetails p{font-size: 20px; font-weight: 400; line-height: 30px; margin-top: 20px; color: #ffffff95;}
 .view-btn.btn{margin-top: 20px; font-size: 0;}
 
 @keyframes zoom-in{
@@ -133,10 +158,10 @@ img{max-width: 100%; height: auto; width: auto;}
 .contactwrap .contactform{width: 48%;}
 .contactwrap .contactform ul{display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;}
 .contactwrap .contactform ul li{width: 48%;}
-.contactwrap .contactform ul li input{width: 100%; padding: 20px; border: 1px solid #a0a0a0; border-radius: 10px; box-sizing: border-box; background: transparent; font-size: 18px; font-weight: 400; font-family: var(--secondary-font); color: #a0a0a0;}
+.contactwrap .contactform ul li input{width: 100%; padding: 20px; border: 1px solid #a0a0a0; border-radius: 10px; box-sizing: border-box; background: transparent; font-size: 18px; font-weight: 400;  color: #a0a0a0;}
 .contactwrap .contactform ul li ::placeholder{color: #a0a0a0;}
 .contactwrap .contactform ul li.fullwidth{width: 100%; text-align: center; font-size: 0;}
-.contactwrap .contactform ul li textarea{width:100%; height:150px; padding:20px; border:1px solid #a0a0a0; border-radius:10px; outline: none; background: transparent; font-size: 18px; font-weight: 400; font-family: var(--secondary-font); color: #a0a0a0; box-sizing: border-box; text-align: left;}
+.contactwrap .contactform ul li textarea{width:100%; height:150px; padding:20px; border:1px solid #a0a0a0; border-radius:10px; outline: none; background: transparent; font-size: 18px; font-weight: 400;  color: #a0a0a0; box-sizing: border-box; text-align: left;}
 .contactwrap .contactform ul li.button a{font-size: 22px; font-weight: 400; color: #fff; display: inline-block; padding: 10px 50px;  border-radius: 30px; line-height: 25px; position: relative; overflow: hidden; border: 2px solid #f75023; box-sizing: border-box; z-index: 0;}
 .contactwrap .contactform ul li.button a::before{content:""; position: absolute; background: #f75023; width: 100%; height: 100%; bottom: 0; left: 0; z-index: -1; transition: .2s linear;}
 .contactwrap .contactform ul li.button a:hover::before{height: 0%;}

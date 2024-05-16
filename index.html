@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<meta name="Visitport" content="width=device-width, initial-scale=1">
 <title>Portfolio</title>
 <link href="css/global.css" rel="stylesheet" type="text/css" />
 <link href="css/print.css" rel="stylesheet" type="text/css" />
-<!-- <link href="css/responsive.css" rel="stylesheet" type="text/css" /> -->
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<!-- <link href="css/responsive.css" rel="stylesheet" type="text/css" />  -->
+<!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"> -->
 
 </head>
 
@@ -17,9 +18,10 @@
         <div class="container">
             <div class="logo">
                 <a href="#"><img src="images/logo.png" alt="Logo" /><span>Port<span>folio</span></span></a>
+                <div class="mobile_menu"><a class="toggle"> <span></span> </a> </div>
             </div>
-            <div class="topnav">
-                <ul class="reset">
+            <div class="topnav" id="main-nav">
+                <ul class="reset" >
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#About">About</a></li>
                     <li><a href="#Projects">Projects</a></li>
@@ -29,6 +31,7 @@
                     <a href="#">Download CV</a>
                 </div>
             </div>
+            
         </div>
     </div>
     <div class="bannersec" id="Home">
@@ -207,7 +210,9 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./js/hc-offcanvas-nav.js" ></script>
 <script>
     $(document).ready(function() {
        $('a[href^="#"]').on('click', function(event) {
@@ -220,6 +225,46 @@
           }
        });
     });
+</script>
+<script>
+    (function($) {
+      var $main_nav = $('#main-nav');
+      var $toggle = $('.toggle');
+
+      var defaultData = {
+        maxWidth: false,
+        customToggle: $toggle,
+        //navTitle: 'All Categories',
+        levelTitles: true,
+        pushContent: 'false',
+        //insertClose: 2,
+        closeLevels: false,
+		position: 'left'
+      };
+
+      // add new items to original nav
+      $main_nav.find('li.add').children('a').on('click', function() {
+        var $this = $(this);
+        var $li = $this.parent();
+        var items = eval('(' + $this.attr('data-add') + ')');
+
+        $li.before('<li class="new"><a>'+items[0]+'</a></li>');
+
+        items.shift();
+
+        if (!items.length) {
+          $li.remove();
+        }
+        else {
+          $this.attr('data-add', JSON.stringify(items));
+        }
+
+        Nav.update(true);
+      });
+
+      // call our plugin
+      var Nav = $main_nav.hcOffcanvasNav(defaultData);
+    })(jQuery);
 </script>
 </body>
 </html>

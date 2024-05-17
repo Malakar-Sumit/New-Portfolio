@@ -82,21 +82,26 @@
     <div class="Projects" id="Projects">
         <div class="container">
             <h3>Projects <span>My Amazing Works</span></h3>
-            <!-- <p>Most common methods for designing websites that work well on desktop <span>is responsive and adaptive design</span></p> -->
+            <div class="category">
+                <ul class="reset">
+                    <li class="filter-button" data-category="All">All</li>
+                    <li class="filter-button" data-category="Live">Live Projects</li>
+                    <li class="filter-button" data-category="Practice">My Projects</li>
+                </ul>
+            </div>
             <div class="projectwrap">
                 <ul class="reset">
-                    <li>
+                    <li data-category="Live">
                         <div class="projectimg">
                             <img src="images/live-project.svg" alt="project-1" >
                         </div>
                         <div class="projectdetails">
                             <h4>Alpha Meta</h4>
-                            <h5>Live Project</h5>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut omnis neque, ipsam consequuntur a possimus beatae magnam suscipit quo laboriosam aspernatur dolorum vero blanditiis necessitatibus quisquam in temporibus doloremque!</p>
                             <div class="Visit-btn btn"><a href="https://www.alpham3ta.com/">Visit</a></div>
                         </div>
                     </li>
-                    <li>
+                    <li data-category="Practice">
                         <div class="projectimg">
                             <img src="images/project-1.svg" alt="project-1" >
                         </div>
@@ -106,7 +111,7 @@
                             <div class="Visit-btn btn"><a href="https://malakar-sumit.github.io/Trekking/">Visit</a></div>
                         </div>
                     </li>
-                    <li>
+                    <li data-category="Practice">
                         <div class="projectimg">
                             <img src="images/project-2.svg" alt="project-1" >
                         </div>
@@ -116,7 +121,7 @@
                             <div class="Visit-btn btn"><a href="https://malakar-sumit.github.io/GYM/">Visit</a></div>
                         </div>
                     </li>
-                    <li>
+                    <li data-category="Practice">
                         <div class="projectimg">
                             <img src="images/project-3.svg" alt="project-1" >
                         </div>
@@ -126,7 +131,7 @@
                             <div class="Visit-btn btn"><a href="https://malakar-sumit.github.io/The-Barber/">Visit</a></div>
                         </div>
                     </li>
-                    <li>
+                    <li data-category="Practice">
                         <div class="projectimg">
                             <img src="images/project-4.svg" alt="project-1" >
                         </div>
@@ -265,6 +270,46 @@
       // call our plugin
       var Nav = $main_nav.hcOffcanvasNav(defaultData);
     })(jQuery);
+</script>
+<script> //topnav
+    $(document).ready(function(){
+        $('.topnav ul li').click(function(){
+            $('li').removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+</script>
+<script> //category
+    $(document).ready(function(){
+        $('.category ul li').click(function(){
+            $('li').removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+</script>
+<script>
+    // Get a reference to the filter buttons and all items
+const filterButtons = document.querySelectorAll('.filter-button');
+const items = document.querySelectorAll('.projectwrap ul li');
+
+// Add an event listener to each filter button
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    // Get the selected category from the button's data-category attribute
+    const selectedCategory = button.dataset.category;
+
+    // Loop through each item and check if it matches the selected category
+    items.forEach((item) => {
+      if (selectedCategory === 'All') {
+        item.classList.remove('hide');
+      } else if (item.dataset.category === selectedCategory) {
+            item.classList.remove('hide');
+        } else {
+        item.classList.add('hide');
+      }
+    });
+  });
+});
 </script>
 </body>
 </html>

@@ -51,10 +51,12 @@ img{max-width: 100%; height: auto; width: auto;}
 .headernav .logo a span:nth-child(2){color: #f75023;}
 .headernav .topnav{display: flex; flex-wrap: wrap; gap: 50px; align-items: center;}
 .headernav .topnav ul{display: flex; flex-wrap: wrap; gap: 50px;}
-.headernav .topnav ul li a{font-size: 18px; font-weight: 400; color: #fff; position: relative; line-height: 20px; display: block; letter-spacing: .5px;}
-.headernav .topnav ul li a::before{content:""; position: absolute; background: #f75023; width: 100%; height: 2px; bottom: -5px; left: 0; transform-origin: 50% 0; transition: .5s; transform: scaleX(0);}
-.headernav .topnav ul li a:hover::before{transform: scaleX(1);}
-.headernav .topnav .download-btn a{font-size: 18px; font-weight: 400; padding: 10px 20px; }
+.headernav .topnav ul li{position: relative;}
+.headernav .topnav ul li::before{content:""; position: absolute; background: #f75023; width: 100%; height: 2px; bottom: -5px; left: 0; transform-origin: 50% 0; transition: .5s; transform: scaleX(0);}
+.headernav .topnav ul li:hover::before{transform: scaleX(1);}
+.headernav .topnav ul li.active::before{transform: scaleX(1);}
+.headernav .topnav ul li a{font-size: 18px; font-weight: 400; color: #fff;  line-height: 20px; display: block; letter-spacing: .5px;}
+.headernav .topnav .download-btn a{font-size: 16px; font-weight: 400; padding: 10px 30px; }
 .headernav .topnav .download-btn a::before{content:""; position: absolute; background: #f75023; width: 100%; height: 0; z-index: -1;}
 .headernav .topnav .download-btn a:hover::before{height: 100%;}
 
@@ -115,7 +117,10 @@ img{max-width: 100%; height: auto; width: auto;}
 .Projects .container::after{position: absolute; content:""; background: url(../images/project-pattern-2.png) no-repeat; width: 250px; height: 240px; bottom: -100px; right: 0; z-index: -1; background-size: contain;}
 .Projects h3{font-size: 25px; font-weight: 500; color: #f75023; text-align: center; line-height: 45px;}
 .Projects h3 span{display: block; font-size: 40px; color: #fff;}
-.Projects .projectwrap{max-width: 1100px; margin: 0 auto; margin-top: 80px;}
+.Projects .category ul{display: flex; flex-wrap: wrap; gap: 50px; align-items: baseline; margin-top: 50px; justify-content: center;}
+.Projects .category ul li{font-size: 18px; font-weight: 500; color: #fff; cursor: pointer; line-height: 20px; padding: 10px 30px; letter-spacing: 1px; border-radius: 5px;}
+.Projects .category ul li.active{background: #f75023;}
+.Projects .projectwrap{max-width: 1100px; margin: 0 auto; margin-top: 50px;}
 .Projects .projectwrap ul{display: flex; flex-wrap: wrap; gap: 50px;}
 .Projects .projectwrap ul li{width: 100%; border-radius: 20px; padding: 30px; background: #2b2d33; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75); align-items: center; border-top: 5px solid #f75023;}
 .Projects .projectwrap ul li .projectimg{width: 48%;}
@@ -124,8 +129,8 @@ img{max-width: 100%; height: auto; width: auto;}
 .Projects .projectwrap ul li:nth-child(even) .projectdetails{order: 1;}
 .Projects .projectwrap ul li .projectdetails{width: 48%; font-size: 0;}
 .Projects .projectwrap ul li .projectdetails h4{ font-size:32px; font-weight:500; color:#fff; line-height:35px; display: inline-block; vertical-align: middle;}
-.Projects .projectwrap ul li .projectdetails h5{font-size: 18px; font-weight: 500; color: #f75023; line-height: 20px; display: inline-block; vertical-align: middle; padding: 5px; background: #fff; border-radius: 10px; margin-left: 20px;}
 .Projects .projectwrap ul li .projectdetails p{font-size:20px; font-weight:400; margin-top:20px; color: #ffffff95;}
+.Projects .projectwrap ul li.hide{display: none;}
 .Visit-btn.btn{margin-top: 20px; font-size: 0;}
 
 @keyframes zoom-in{
@@ -149,23 +154,23 @@ img{max-width: 100%; height: auto; width: auto;}
 .contactsec .contactwrap::after{content:""; position: absolute; background: url(../images/contact-pattern-3.png) no-repeat; width: 165px; height: 195px; background-size: contain; right:-95px; bottom:-40px;} */
 .contactwrap .contactinfo{width: 48%;}
 .contactwrap .contactinfo ul li + li{margin-top: 20px;}
-.contactwrap .contactinfo ul li .location{display: inline-block; vertical-align: middle; padding: 35px; background: #fedfd7; position: relative; border-radius: 50%;}
+.contactwrap .contactinfo ul li .location{display: inline-block; vertical-align: middle; padding: 30px; background: #fedfd7; position: relative; border-radius: 50%;}
 .contactwrap .contactinfo ul li .location::before{content:""; position:absolute; background:url(../images/location.png) no-repeat; width:24px; height: 24px; top: 50%; left: 50%; transform: translate(-50% , -50%);}
-.contactwrap .contactinfo ul li .email{display: inline-block; vertical-align: middle; padding: 35px; background: #ddf5e6; position: relative; border-radius: 50%;}
+.contactwrap .contactinfo ul li .email{display: inline-block; vertical-align: middle; padding: 30px; background: #ddf5e6; position: relative; border-radius: 50%;}
 .contactwrap .contactinfo ul li .email::before{content:""; position:absolute; background:url(../images/email.png) no-repeat; width: 24px; height: 24px; top: 50%; left: 50%; transform: translate(-50%,-50%);}
-.contactwrap .contactinfo ul li .phone{display: inline-block; vertical-align: middle; padding: 35px; background: #ece8fd; position: relative; border-radius: 50%;}
+.contactwrap .contactinfo ul li .phone{display: inline-block; vertical-align: middle; padding: 30px; background: #ece8fd; position: relative; border-radius: 50%;}
 .contactwrap .contactinfo ul li .phone::before{content:""; position: absolute; background: url(../images/phone.png) no-repeat; width: 24px; height: 24px; top: 50%; left: 50%; transform: translate(-50%,-50%);}
 .contactwrap .contactinfo ul li h4{font-size:25px; font-weight: 500; color: #fff; display: inline-block; vertical-align: middle; margin-left: 20px;}
-.contactwrap .contactinfo ul li h4 span{font-size:18px; font-weight: 400; color: #ffffff95; display: block; transition: .2s linear;}
+.contactwrap .contactinfo ul li h4 span{font-size:18px; font-weight: 400; color: #e9e3e3; display: block; transition: .2s linear;}
 .contactwrap .contactinfo ul li h4 a span:hover{color: #f75023;}
 .contactwrap .contactinfo ul li:nth-child(1) h4 span{color: #e9e3e3;}
 .contactwrap .contactform{width: 48%;}
 .contactwrap .contactform ul{display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;}
 .contactwrap .contactform ul li{width: 47%;}
-.contactwrap .contactform ul li input{width: 100%; padding:20px 10px; border: 1px solid #a0a0a0; border-radius: 10px; box-sizing: border-box; background: transparent; font-size: 18px; font-weight: 400;  color: #a0a0a0;}
+.contactwrap .contactform ul li input{width: 100%; padding:15px 10px; border: 1px solid #a0a0a0; border-radius: 10px; box-sizing: border-box; background: transparent; font-size:18px; font-weight:400; color:#a0a0a0; font-family:'Jost';}
 .contactwrap .contactform ul li ::placeholder{color: #a0a0a0;}
 .contactwrap .contactform ul li.fullwidth{width: 100%; text-align: center; font-size: 0;}
-.contactwrap .contactform ul li textarea{width:100%; height:150px; padding:20px; border:1px solid #a0a0a0; border-radius:10px; outline: none; background: transparent; font-size: 18px; font-weight: 400;  color: #a0a0a0; box-sizing: border-box; text-align: left;}
+.contactwrap .contactform ul li textarea{width:100%; height:150px; padding:15px 10px; border:1px solid #a0a0a0; border-radius:10px; outline: none; background: transparent; font-size: 18px; font-weight: 400;  color: #a0a0a0; box-sizing: border-box; text-align: left; font-family:'Jost';}
 .contactwrap .contactform ul li.button a{font-size: 22px; font-weight: 400; color: #fff; display: inline-block; padding: 10px 50px;  border-radius: 30px; line-height: 25px; position: relative; overflow: hidden; border: 2px solid #f75023; box-sizing: border-box; z-index: 0;}
 .contactwrap .contactform ul li.button a::before{content:""; position: absolute; background: #f75023; width: 100%; height: 100%; bottom: 0; left: 0; z-index: -1; transition: .2s linear;}
 .contactwrap .contactform ul li.button a:hover::before{height: 0%;}
@@ -220,7 +225,7 @@ img{max-width: 100%; height: auto; width: auto;}
     .hc-offcanvas-nav label {position:absolute;top:0;left:0;right:0;bottom:0;z-index:10;cursor:pointer}
     .hc-offcanvas-nav li.nav-parent .nav-item .icon {display: none;}
     .hc-offcanvas-nav a {position:relative;display:block;box-sizing:border-box;cursor:pointer}
-    .hc-offcanvas-nav a, .hc-offcanvas-nav a:hover {text-decoration:none; background: #2f2f2f;}
+    .hc-offcanvas-nav a, .hc-offcanvas-nav a:hover {text-decoration:none; background: #4b4b4b;}
     .hc-offcanvas-nav .nav-item {position:relative;display:block;box-sizing:border-box}
     .hc-offcanvas-nav.disable-body::after, .hc-offcanvas-nav .nav-wrapper::after {content:'';position:fixed;z-index:9990;top:0;left:0;right:0;bottom:0;width:100%;height:100%;-ms-scroll-chaining:none;overscroll-behavior:none;visibility:hidden;opacity:0;transition:visibility 0s ease .4s, opacity .4s ease}
     .hc-offcanvas-nav.disable-body.nav-open::after, .hc-offcanvas-nav .sub-level-open::after {visibility:visible;opacity:1;transition-delay:.05s}
@@ -256,12 +261,12 @@ img{max-width: 100%; height: auto; width: auto;}
     .hc-nav-trigger.toggle-open span::before {-webkit-transform:translate3d(0, 10px, 0);transform:translate3d(0, 10px, 0)}
     .hc-nav-trigger.toggle-open span::after {-webkit-transform:rotate(-90deg) translate3d(13px, 0, 0);transform:rotate(-90deg) translate3d(13px, 0, 0)}
     .hc-offcanvas-nav::after, .hc-offcanvas-nav .nav-wrapper::after {background:rgba(0, 0, 0, 0.3)}
-    .hc-offcanvas-nav .nav-container, .hc-offcanvas-nav .nav-wrapper, .hc-offcanvas-nav ul {background:#000;}
+    .hc-offcanvas-nav .nav-container, .hc-offcanvas-nav .nav-wrapper, .hc-offcanvas-nav ul {background:#2b2d33;}
     .hc-offcanvas-nav h3 {font-size:19px;font-weight:normal;text-align:left;padding:20px 17px;color:#fff}
-    .hc-offcanvas-nav a, .hc-offcanvas-nav .nav-item {padding:10px 15px; z-index:1;background:#000;border-bottom:1px solid #575757; color: #fff; font-size: 15px;  }
-    .hc-offcanvas-nav:not(.touch-device) a:hover {background:#305c6a}
-    .hc-offcanvas-nav ul:first-of-type:not(:first-child)>li:first-child:not(.nav-back):not(.nav-close)>a { border-top:1px solid #003678; margin-top:-1px}
-    .hc-offcanvas-nav li { text-align:left }
+    .hc-offcanvas-nav a, .hc-offcanvas-nav .nav-item {padding:10px 15px; z-index:1;background:#2b2d33;border-bottom:1px solid #575757; color: #fff; font-size: 16px; font-weight: 500;}
+    .hc-offcanvas-nav:not(.touch-device) a:hover{background:#ce4b274f}
+    .hc-offcanvas-nav ul:first-of-type:not(:first-child)>li:first-child:not(.nav-back):not(.nav-close)>a {border-top:1px solid #003678; margin-top:-1px}
+    .hc-offcanvas-nav li {text-align:left}
     .hc-offcanvas-nav li.nav-close a, .hc-offcanvas-nav li.nav-back a {background:#000; border-top:1px solid #575757; border-bottom:1px solid #575757;}
     /* .hc-offcanvas-nav li.nav-close a:hover, .hc-offcanvas-nav li.nav-back a:hover { background:#0c3986} */
     .hc-offcanvas-nav li.nav-close:not(:first-child) a, .hc-offcanvas-nav li.nav-back:not(:first-child) a { margin-top:-1px}
@@ -297,10 +302,14 @@ img{max-width: 100%; height: auto; width: auto;}
      
     .headernav .logo{display: flex; flex-wrap: wrap; gap: 30px;}
     .headernav .logo a{order: 2;}
-
-    .headersec{padding-bottom: 50px;}
-    .aboutwork,.aboutsec,.ourservices,.testimonialsec,.partnersec{padding: 50px 0; }
     .headernav .topnav ul{display: none;}
+    .bannersec{padding-bottom: 50px;}
+    .aboutsec, .Projects, .contactsec{padding: 50px 0;}
+    .footersec{padding: 30px;}
+
+    /* .headersec{padding-bottom: 50px;}
+    .aboutwork,.aboutsec,.ourservices,.testimonialsec,.partnersec{padding: 50px 0; }
+    
     .bannersec .bannertxt h3 span{font-size: 50px;}
     .bannersec .bannertxt h4,.aboutwork .workwrap ul li h3{font-size: 22px;}
     .bannersec .bannertxt .details{margin-top: 30px; gap: 20px;}
@@ -336,7 +345,7 @@ img{max-width: 100%; height: auto; width: auto;}
     .contactwrap .contactinfo ul li h4{margin-left: 0; display: block;}
     .contactsec .container::after {width: 140px; height: 140px; right: -15px; bottom: 415px;}
     .testimonialsec .container::before{width: 150px; height: 150px; right: -15px; top: -95px;}
-    .aboutdetails::before{width: 200px; height: 100px;}
+    .aboutdetails::before{width: 200px; height: 100px;} */
 }
 @media only screen and ( max-width: 768px ) {
 }

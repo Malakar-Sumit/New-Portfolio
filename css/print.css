@@ -66,7 +66,7 @@ img{max-width: 100%; height: auto; width: auto;}
 .bannersec .bannertxt h3{font-size: 30px; font-weight: 500; color: #f75023; line-height: 30px; }
 .bannersec .bannertxt h2{ font-size: 60px; font-weight: 600; color: #fff; line-height: 60px; margin-top: 10px;}
 .bannersec .bannertxt h4{font-size:26px; font-weight:500; color:#fff; margin-top:30px; line-height:30px;}
-.bannersec .bannertxt h4 span{color: #1cbe59; }
+.bannersec .bannertxt h4 span{color: #1cbe59; display: inline-block;}
 .bannersec .bannertxt h4 span.city{color:#f0c45c;}
 .bannersec .bannertxt p{font-size:22px; font-weight:400; color: #ffffff95; margin-top:30px;}
 .bannersec .bannertxt .about-btn{ margin-top: 50px; font-size: 0;}
@@ -191,21 +191,27 @@ img{max-width: 100%; height: auto; width: auto;}
 
 @media only screen and ( max-width: 1280px ) {
     .aboutsec .aboutdetails h3 span{font-size: 30px; line-height: normal;}
-    .bannersec .bannertxt p{font-size: 19px;}
+    .bannersec .bannertxt p{font-size: 20px;}
 }
 @media only screen and ( max-width: 1024px ) {
     .bannersec .bannertxt h4{font-size: 25px;}
 }
 @media only screen and ( max-width: 980px ) {
+    .bannersec .bannertxt{padding: 0 0;}
+    .bannersec .bannertxt h2{font-size: 55px;}
+    .bannersec .bannertxt h4{font-size: 22px;}
+    .aboutsec .aboutdetails h3{font-size: 22px;}
+    .aboutsec .aboutdetails h3 span{font-size: 24px;}
     .Projects .projectwrap ul li .projectdetails h4{font-size:28px;}
     .Projects .projectwrap ul li .projectdetails p{font-size: 18px;}
+    .bannersec .bannertxt p{font-size: 18px;}
 }
 @media only screen and ( max-width: 800px ) {
 
     /*Mobile Menu Start*/
     .hc-offcanvas-nav .nav-item br { display:none;}
     .mobile_menu{display: inline-block !important; vertical-align: middle; position: relative; width: 26px; order: 1;}
-    .hc-nav.hc-nav-1 { display:block !important;}
+    .hc-nav.hc-nav-1 { display:block !important; order: 3;}
     .hc-offcanvas-nav.hc-nav-1 { display:block !important;}
     
     .mobilestyicky {position: fixed; width: 100%; left: 0; top: 0; z-index:99; padding:5px 0; border-bottom:1px solid #eaeaea; background:#fff; display:block;}
@@ -263,7 +269,7 @@ img{max-width: 100%; height: auto; width: auto;}
     .hc-nav-trigger.toggle-open span {background:rgba(0, 0, 0, 0);-webkit-transform:rotate(45deg);transform:rotate(45deg)}
     .hc-nav-trigger.toggle-open span::before {-webkit-transform:translate3d(0, 10px, 0);transform:translate3d(0, 10px, 0)}
     .hc-nav-trigger.toggle-open span::after {-webkit-transform:rotate(-90deg) translate3d(13px, 0, 0);transform:rotate(-90deg) translate3d(13px, 0, 0)}
-    .hc-offcanvas-nav::after, .hc-offcanvas-nav .nav-wrapper::after {background:rgba(0, 0, 0, 0.3)}
+    .hc-offcanvas-nav::after, .hc-offcanvas-nav .nav-wrapper::after {background:rgba(0, 0, 0, 0.7)}
     .hc-offcanvas-nav .nav-container, .hc-offcanvas-nav .nav-wrapper, .hc-offcanvas-nav ul {background:#2b2d33;}
     .hc-offcanvas-nav h3 {font-size:19px;font-weight:normal;text-align:left;padding:20px 17px;color:#fff}
     .hc-offcanvas-nav a, .hc-offcanvas-nav .nav-item {padding:10px 15px; z-index:1;background:#2b2d33;border-bottom:1px solid #575757; color: #fff; font-size: 16px; font-weight: 500;}
@@ -303,11 +309,16 @@ img{max-width: 100%; height: auto; width: auto;}
     .hc-offcanvas-nav.nav-levels-expand .nav-container span.nav-next::before, .hc-offcanvas-nav.nav-levels-none .nav-container span.nav-next::before { margin-top:-2px; -webkit-transform:translate(-50%, -50%) rotate(-135deg); transform:translate(-50%, -50%) rotate(-135deg)}
     /*Mobile Menu End*/	
      
-    .headernav .logo{display: flex; flex-wrap: wrap; gap: 30px;}
-    .headernav .logo a{order: 2;}
+    .headernav .logo{order: 2;}
     .headernav .topnav ul{display: none;}
     .bannersec{padding-bottom: 50px;}
-    .aboutsec, .Projects, .contactsec{padding: 50px 0;}
+    .bannersec .container,.aboutsec .container{gap: 20px;}
+    .bannersec .bannertxt h2{font-size: 50px; line-height: 50px;}
+    .bannersec .bannertxt h4 {font-size: 20px; line-height: 25px; margin-top: 20px;}
+    .bannersec .bannertxt p {font-size: 16px; margin-top: 20px;}
+    .bannersec .bannertxt .about-btn{margin-top: 30px;}
+    .aboutsec, .Projects, .contactsec{padding: 70px 0;}
+    .aboutsec .aboutdetails p {font-size: 18px; line-height: 26px;}
     .footersec{padding: 30px;}
 
     /* .headersec{padding-bottom: 50px;}

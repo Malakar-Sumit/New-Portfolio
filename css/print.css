@@ -389,7 +389,7 @@ img{max-width: 100%; height: auto; width: auto;}
     .bannersec .bannertxt h4, .aboutsec .aboutdetails h3,.Projects h3,.Projects .projectwrap ul li .projectdetails h4,.contactsec h3{font-size: 21px; line-height: 25px;}
     .bannersec .bannertxt .about-btn a,.footersec .footerleftsec p{font-size: 18px; line-height: 20px;}
     .bannersec .bannertxt p, .aboutsec .aboutdetails p, .Projects .projectwrap ul li .projectdetails p{font-size: 16px; line-height: 20px;}
-    .aboutsec .aboutdetails span, .Projects span.title, .contactsec span.title { font-size: 24px; line-height: 30px; }
+    .aboutsec .aboutdetails span, .Projects span.title, .contactsec span.title { font-size: 23px; line-height: 25px; }
     .Projects .category ul li { font-size: 14px; padding: 10px 10px; }
     .Projects .container::before { width: 85px; height: 105px; }
     .contactsec .container::before { width: 60px; height: 55px;}
@@ -398,10 +398,13 @@ img{max-width: 100%; height: auto; width: auto;}
 }
 @media only screen and ( max-width: 384px ) {
     .bannersec .avatarsec span img{width: 40px; height: 40px; padding: 3px; border-radius: 5px;}
+    .footersec .footerleftsec p{font-size: 16px;}
 }
 @media only screen and ( max-width: 375px ) {
 }
 @media only screen and ( max-width: 360px ) {
+    .contactwrap .contactinfo ul li h4 span{font-size: 15px;}
+    .Projects .category ul{gap: 10px; justify-content: space-between;}
 }
 @media only screen and ( max-width: 320px ) {
 }
